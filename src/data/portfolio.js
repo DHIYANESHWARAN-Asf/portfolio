@@ -7,7 +7,6 @@ export const portfolioData = {
     mainStatement: "I turn ideas into practical software and data-driven solutions.",
     supportingText: "Currently pursuing an M.Sc. in Data Science, with a background in Computer Science and hands-on experience building software, web applications, databases, and IoT systems. Interested in using data, technology, and practical problem-solving to build useful solutions.",
     availability: "OPEN TO OPPORTUNITIES",
-    resumeUrl: "/resume.pdf",
     image: profilePhoto,
   },
 
@@ -292,7 +291,7 @@ export const portfolioData = {
     email: "dhiyaneshdhiyanesh2@gmail.com",
     phone: "+91 6382432578",
     location: "Sathyamangalam, Tamil Nadu, India",
-    linkedin: "https://linkedin.com/in/dhiyaneshwaran-r",
-    github: "https://github.com/dhiyaneshwaran-r",
+    linkedin: "https://www.linkedin.com/in/dhiyaneshwaran-r-983033312/",
+    github: "https://github.com/DHIYANESHWARAN-Asf",
   },
 };

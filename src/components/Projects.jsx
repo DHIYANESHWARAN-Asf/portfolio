@@ -144,7 +144,7 @@ const Projects = () => {
                         className="flex items-center space-x-2 px-4 py-2.5 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white font-medium text-xs sm:text-sm rounded-xl border border-zinc-800 transition-colors"
                       >
                         <GithubIcon size={16} />
-                        <span>GitHub</span>
+                        <span>View on GitHub →</span>
                       </a>
                     )}
 

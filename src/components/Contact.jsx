@@ -89,16 +89,56 @@ const Contact = () => {
           {/* Left Column: Direct Contact Cards & Social Links */}
           <div className="lg:col-span-5 space-y-6 text-left">
             <div className="space-y-4">
+              {/* LinkedIn Card */}
+              <a
+                href={contact.linkedin || "https://www.linkedin.com/in/dhiyaneshwaran-r-983033312/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-5 bg-[#101216] border border-zinc-800 rounded-2xl hover:border-blue-500/40 transition-all duration-300 shadow-lg"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="p-3 bg-[#08090B] border border-zinc-800 rounded-xl group-hover:border-blue-500/30 transition-colors text-blue-400">
+                    <LinkedinIcon size={22} />
+                  </div>
+                  <div className="space-y-0.5">
+                    <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block">LinkedIn</span>
+                    <p className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">
+                      Connect with me →
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              {/* GitHub Card */}
+              <a
+                href={contact.github || "https://github.com/DHIYANESHWARAN-Asf"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-5 bg-[#101216] border border-zinc-800 rounded-2xl hover:border-blue-500/40 transition-all duration-300 shadow-lg"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="p-3 bg-[#08090B] border border-zinc-800 rounded-xl group-hover:border-blue-500/30 transition-colors text-zinc-300 group-hover:text-white">
+                    <GithubIcon size={22} />
+                  </div>
+                  <div className="space-y-0.5">
+                    <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block">GitHub</span>
+                    <p className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">
+                      View my GitHub →
+                    </p>
+                  </div>
+                </div>
+              </a>
+
               {/* Email Card */}
               <a
                 href={`mailto:${contact.email}`}
-                className="group flex items-start space-x-4 p-5 bg-[#101216] border border-zinc-800 rounded-2xl hover:border-blue-500/40 transition-all duration-300 shadow-lg"
+                className="group flex items-center space-x-4 p-5 bg-[#101216] border border-zinc-800 rounded-2xl hover:border-blue-500/40 transition-all duration-300 shadow-lg"
               >
                 <div className="p-3 bg-[#08090B] border border-zinc-800 rounded-xl group-hover:border-blue-500/30 transition-colors text-blue-400">
                   <Mail size={22} />
                 </div>
-                <div className="space-y-1">
-                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider">Email Address</span>
+                <div className="space-y-0.5">
+                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block">Email Address</span>
                   <p className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors break-all">
                     {contact.email}
                   </p>
@@ -108,13 +148,13 @@ const Contact = () => {
               {/* Phone Card */}
               <a
                 href={`tel:${contact.phone}`}
-                className="group flex items-start space-x-4 p-5 bg-[#101216] border border-zinc-800 rounded-2xl hover:border-blue-500/40 transition-all duration-300 shadow-lg"
+                className="group flex items-center space-x-4 p-5 bg-[#101216] border border-zinc-800 rounded-2xl hover:border-blue-500/40 transition-all duration-300 shadow-lg"
               >
                 <div className="p-3 bg-[#08090B] border border-zinc-800 rounded-xl group-hover:border-blue-500/30 transition-colors text-indigo-400">
                   <Phone size={22} />
                 </div>
-                <div className="space-y-1">
-                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider">Phone / WhatsApp</span>
+                <div className="space-y-0.5">
+                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block">Phone / WhatsApp</span>
                   <p className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">
                     {contact.phone}
                   </p>
@@ -122,50 +162,16 @@ const Contact = () => {
               </a>
 
               {/* Location Card */}
-              <div className="flex items-start space-x-4 p-5 bg-[#101216] border border-zinc-800 rounded-2xl shadow-lg">
+              <div className="flex items-center space-x-4 p-5 bg-[#101216] border border-zinc-800 rounded-2xl shadow-lg">
                 <div className="p-3 bg-[#08090B] border border-zinc-800 rounded-xl text-emerald-400">
                   <MapPin size={22} />
                 </div>
-                <div className="space-y-1">
-                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider">Location</span>
+                <div className="space-y-0.5">
+                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block">Location</span>
                   <p className="text-sm font-semibold text-white">
                     {contact.location}
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Social Buttons */}
-            <div className="pt-4 border-t border-zinc-800/80 space-y-3">
-              <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider block">Connect Online</span>
-              <div className="flex items-center space-x-3">
-                <a
-                  href={contact.github || "https://github.com/dhiyaneshwaran-r"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub Profile"
-                  className="p-3 bg-[#101216] border border-zinc-800 hover:border-blue-500/40 text-zinc-300 hover:text-white rounded-xl transition-all hover:scale-105"
-                >
-                  <GithubIcon size={20} />
-                </a>
-
-                <a
-                  href={contact.linkedin || "https://linkedin.com/in/dhiyaneshwaran-r"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn Profile"
-                  className="p-3 bg-[#101216] border border-zinc-800 hover:border-blue-500/40 text-zinc-300 hover:text-white rounded-xl transition-all hover:scale-105"
-                >
-                  <LinkedinIcon size={20} />
-                </a>
-
-                <a
-                  href={`mailto:${contact.email}`}
-                  aria-label="Send Direct Email"
-                  className="p-3 bg-[#101216] border border-zinc-800 hover:border-blue-500/40 text-zinc-300 hover:text-white rounded-xl transition-all hover:scale-105"
-                >
-                  <Mail size={20} />
-                </a>
               </div>
             </div>
           </div>

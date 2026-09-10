@@ -1,6 +1,21 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Download, FileText } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+
+const LinkedinIcon = ({ size = 18 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
+const GithubIcon = ({ size = 18 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -12,7 +27,7 @@ const navLinks = [
   { name: 'Contact', href: '#contact' },
 ];
 
-const Navbar = ({ resumeUrl = "/resume.pdf" }) => {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
@@ -54,17 +69,6 @@ const Navbar = ({ resumeUrl = "/resume.pdf" }) => {
     }
   };
 
-  const handleDownloadResume = () => {
-    // Open resume or trigger print/download view
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.target = '_blank';
-    link.download = 'Dhiyaneshwaran_R_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -96,7 +100,7 @@ const Navbar = ({ resumeUrl = "/resume.pdf" }) => {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => scrollToSection(e, link.href)}
-                  className={`px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                  className={`px-3.5 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
                     isActive
                       ? 'text-white bg-blue-500/10 border border-blue-500/30'
                       : 'text-zinc-400 hover:text-white hover:bg-zinc-800/40'
@@ -108,28 +112,32 @@ const Navbar = ({ resumeUrl = "/resume.pdf" }) => {
             })}
           </nav>
 
-          {/* Desktop Resume CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <button
-              onClick={handleDownloadResume}
-              className="flex items-center space-x-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-all duration-200 blue-glow-sm hover:scale-[1.02] active:scale-[0.98]"
+          {/* Desktop Social CTAs */}
+          <div className="hidden lg:flex items-center space-x-2.5">
+            <a
+              href="https://github.com/DHIYANESHWARAN-Asf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
+              className="p-2.5 bg-[#101216] border border-zinc-800 hover:border-blue-500/40 text-zinc-400 hover:text-white rounded-lg transition-colors"
+              title="GitHub Profile"
             >
-              <Download size={16} />
-              <span>Download Resume</span>
-            </button>
+              <GithubIcon size={18} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dhiyaneshwaran-r-983033312/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+              className="p-2.5 bg-[#101216] border border-zinc-800 hover:border-blue-500/40 text-zinc-400 hover:text-blue-400 rounded-lg transition-colors"
+              title="LinkedIn Profile"
+            >
+              <LinkedinIcon size={18} />
+            </a>
           </div>
 
           {/* Mobile Hamburger Button */}
           <div className="flex items-center space-x-3 lg:hidden">
-            <button
-              onClick={handleDownloadResume}
-              aria-label="Download Resume"
-              className="p-2 bg-blue-600/20 border border-blue-500/30 text-blue-400 rounded-lg text-xs flex items-center space-x-1"
-            >
-              <FileText size={16} />
-              <span className="hidden sm:inline">Resume</span>
-            </button>
-
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-zinc-400 hover:text-white bg-zinc-900 border border-zinc-800 rounded-lg transition-colors"
@@ -151,7 +159,7 @@ const Navbar = ({ resumeUrl = "/resume.pdf" }) => {
             transition={{ duration: 0.25 }}
             className="lg:hidden bg-[#101216]/95 backdrop-blur-lg border-b border-zinc-800 px-4 pt-3 pb-6 shadow-2xl"
           >
-            <div className="space-y-1 mb-4">
+            <div className="space-y-1">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.href.substring(1);
                 return (
@@ -169,16 +177,6 @@ const Navbar = ({ resumeUrl = "/resume.pdf" }) => {
                   </a>
                 );
               })}
-            </div>
-
-            <div className="pt-2 border-t border-zinc-800/80">
-              <button
-                onClick={handleDownloadResume}
-                className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg text-sm transition-colors"
-              >
-                <Download size={18} />
-                <span>Download Resume</span>
-              </button>
             </div>
           </motion.div>
         )}

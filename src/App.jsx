@@ -17,12 +17,6 @@ import ScrollProgress from './components/ScrollProgress';
 import CustomCursor from './components/CustomCursor';
 
 function App() {
-  const resumeUrl = "/resume.html";
-
-  const handleDownloadResume = () => {
-    window.open(resumeUrl, '_blank');
-  };
-
   return (
     <div className="relative min-h-screen bg-[#08090B] text-zinc-100 selection:bg-blue-500 selection:text-white font-sans">
       {/* Desktop Custom Cursor */}
@@ -31,12 +25,12 @@ function App() {
       <ScrollProgress />
 
       {/* Sticky Navigation */}
-      <Navbar resumeUrl={resumeUrl} />
+      <Navbar />
 
       {/* Main Page Flow */}
       <main>
         {/* Hero Section */}
-        <Hero onDownloadResume={handleDownloadResume} />
+        <Hero />
 
         {/* About & Key Stats */}
         <About />

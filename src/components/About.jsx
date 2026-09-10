@@ -72,10 +72,17 @@ const About = () => {
             {about.stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-[#101216] border border-zinc-800 rounded-xl p-5 hover:border-blue-500/40 transition-all duration-300 group"
+                className={`rounded-xl p-5 transition-all duration-300 group ${
+                  stat.current
+                    ? 'bg-[#101216] border-2 border-blue-500/60 shadow-lg shadow-blue-500/10'
+                    : 'bg-[#101216] border border-zinc-800 hover:border-blue-500/40'
+                }`}
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider">
+                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider flex items-center gap-1.5">
+                    {stat.current && (
+                      <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                    )}
                     {stat.label}
                   </span>
                   <div className="p-2 bg-zinc-900 border border-zinc-800 rounded-lg group-hover:border-blue-500/30 transition-colors">

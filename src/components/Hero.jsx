@@ -22,7 +22,7 @@ const Hero = ({ onDownloadResume }) => {
   });
 
   // Hero Name Character-by-Character Typing State
-  const fullName = "Dhiyaneshwaran R";
+  const fullName = "DHIYANESHWARAN R";
   const [typedText, setTypedText] = useState(() => {
     if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return fullName;
@@ -123,11 +123,11 @@ const Hero = ({ onDownloadResume }) => {
       {/* Subtle Background Code Visual Overlay */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20 font-mono text-[11px] text-zinc-600 space-y-3 p-8 hidden md:block">
         <div className="flex justify-between">
-          <span>01 const developer = "Dhiyaneshwaran R";</span>
+          <span>01 const developer = "DHIYANESHWARAN R";</span>
           <span>// System Online</span>
         </div>
         <div className="flex justify-between">
-          <span>02 const focus = ["Software", "Web", "IoT", "Arduino", "C/C++"];</span>
+          <span>02 const focus = ["Data Science", "Software", "Web", "IoT", "Arduino", "C/C++"];</span>
           <span>BUILD • DEBUG • LEARN • REPEAT</span>
         </div>
         <div className="flex justify-between">
@@ -193,7 +193,11 @@ const Hero = ({ onDownloadResume }) => {
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-400 tracking-wide font-mono">
-                Computer Science Graduate <span className="text-zinc-600 font-sans mx-1">•</span> Developer <span className="text-zinc-600 font-sans mx-1">•</span> IoT Builder
+                M.Sc. Data Science Student <span className="text-zinc-600 font-sans mx-1">•</span> Developer <span className="text-zinc-600 font-sans mx-1">•</span> IoT Builder
+              </p>
+              <p className="text-sm sm:text-base text-zinc-400 font-medium tracking-wide flex items-center gap-2 pt-1 font-mono">
+                <span className="w-2 h-2 rounded-full bg-blue-500 inline-block animate-pulse"></span>
+                <span>Currently pursuing <span className="text-blue-400 font-semibold">M.Sc. Data Science</span> — 1st Year</span>
               </p>
             </motion.div>
 
@@ -270,7 +274,7 @@ const Hero = ({ onDownloadResume }) => {
               <div
                 onPointerDown={handlePointerDown}
                 onPointerMove={handlePointerMove}
-                className={`relative bg-[#101216] border border-zinc-800 rounded-2xl p-6 shadow-2xl space-y-5 transition-transform duration-100 ease-out cursor-grab ${
+                className={`relative bg-[#101216] border border-zinc-800 rounded-2xl p-5 shadow-2xl space-y-4 transition-transform duration-100 ease-out cursor-grab ${
                   isDragging ? 'cursor-grabbing scale-[1.01]' : ''
                 }`}
                 style={{
@@ -308,7 +312,7 @@ const Hero = ({ onDownloadResume }) => {
 
                       <div className="space-y-1">
                         <p className="text-sm font-semibold text-white tracking-wide">Developer Workspace</p>
-                        <p className="text-xs text-zinc-400 font-mono">Software • C/C++ • IoT</p>
+                        <p className="text-xs text-zinc-400 font-mono">Software • Data Science • IoT</p>
                       </div>
                     </div>
                   )}
@@ -335,28 +339,6 @@ const Hero = ({ onDownloadResume }) => {
 
                   {/* Background grid line inside frame */}
                   <div className="absolute inset-0 bg-[radial-gradient(#1e222b_1px,transparent_1px)] [background-size:16px_16px] opacity-30 pointer-events-none"></div>
-                </div>
-
-                {/* Monospace Developer Terminal Element */}
-                <div className="bg-[#08090B] border border-zinc-800/90 rounded-xl p-3.5 font-mono text-xs space-y-1 text-left">
-                  <div className="text-zinc-500">$ whoami</div>
-                  <div className="text-blue-400 font-bold pl-3">dhiyaneshwaran</div>
-                  <div className="text-zinc-500">$ role</div>
-                  <div className="text-zinc-300 pl-3">developer • IoT builder</div>
-                  <div className="text-zinc-500">$ status</div>
-                  <div className="text-emerald-400 font-semibold pl-3">ready_to_build</div>
-                </div>
-
-                {/* Live Status Bar */}
-                <div className="bg-[#08090B]/80 border border-zinc-800/80 rounded-xl p-3 flex items-center justify-between text-xs font-mono">
-                  <div className="flex items-center space-x-2 text-zinc-400">
-                    <Code2 size={14} className="text-blue-400" />
-                    <span>Status: Active</span>
-                  </div>
-
-                  <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                    <Sparkles size={12} className="animate-pulse" /> Ready to Build
-                  </span>
                 </div>
               </div>
 
@@ -385,7 +367,7 @@ const Hero = ({ onDownloadResume }) => {
                 </div>
               </motion.div>
 
-              {/* FLOATING CARD 2: Computer Science */}
+              {/* FLOATING CARD 2: Data Science */}
               <motion.div
                 animate={{
                   y: [0, 8, 0],
@@ -406,8 +388,8 @@ const Hero = ({ onDownloadResume }) => {
                   <Terminal size={18} />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs font-semibold text-white">Computer Science</p>
-                  <p className="text-[10px] text-zinc-400 font-mono">B.Sc. Graduate</p>
+                  <p className="text-xs font-semibold text-white">Data Science</p>
+                  <p className="text-[10px] text-zinc-400 font-mono">M.Sc. — 1st Year</p>
                 </div>
               </motion.div>
 

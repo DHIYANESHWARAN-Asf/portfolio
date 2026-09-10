@@ -1,4 +1,4 @@
-# Dhiyaneshwaran R - Professional Portfolio
+# DHIYANESHWARAN R - Professional Portfolio
 
 A modern, premium developer portfolio website built with React, Vite, and Tailwind CSS.
 

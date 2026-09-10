@@ -83,7 +83,7 @@ const Navbar = ({ resumeUrl = "/resume.pdf" }) => {
             className="group flex items-center space-x-2 focus:outline-none"
           >
             <span className="text-xl font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors">
-              DHiyANESHWARAN R
+              DHIYANESHWARAN R
             </span>
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
           </a>

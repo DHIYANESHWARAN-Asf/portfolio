@@ -106,6 +106,13 @@ const Education = () => {
                       </div>
 
                       <div className="flex flex-wrap items-center gap-2">
+                        {edu.status === 'CURRENT' && (
+                          <span className="inline-flex items-center space-x-1.5 px-3 py-1 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono font-bold text-xs rounded-lg">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span>CURRENT</span>
+                          </span>
+                        )}
+
                         <span className="px-3 py-1 bg-[#08090B] border border-zinc-800 text-zinc-300 text-xs font-mono rounded-lg">
                           {edu.period}
                         </span>

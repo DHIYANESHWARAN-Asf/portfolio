@@ -2,10 +2,10 @@ import profilePhoto from '../assets/my image.png';
 
 export const portfolioData = {
   profile: {
-    name: "Dhiyaneshwaran R",
-    title: "Computer Science Graduate · Developer · IoT Builder",
-    mainStatement: "I turn ideas into practical software and hardware solutions.",
-    supportingText: "Computer Science graduate interested in software development, IoT systems, databases, and emerging AI technologies. I enjoy learning by building practical solutions to real-world problems.",
+    name: "DHIYANESHWARAN R",
+    title: "M.Sc. Data Science Student · Developer · IoT Builder",
+    mainStatement: "I turn ideas into practical software and data-driven solutions.",
+    supportingText: "Currently pursuing an M.Sc. in Data Science, with a background in Computer Science and hands-on experience building software, web applications, databases, and IoT systems. Interested in using data, technology, and practical problem-solving to build useful solutions.",
     availability: "OPEN TO OPPORTUNITIES",
     resumeUrl: "/resume.pdf",
     image: profilePhoto,
@@ -24,15 +24,15 @@ export const portfolioData = {
   about: {
     heading: "A LITTLE ABOUT ME",
     paragraphs: [
-      "I'm a Computer Science graduate who enjoys building things that solve actual problems.",
-      "My interests sit somewhere between software, AI and hardware — from web applications and databases to Arduino-based IoT systems.",
-      "I learn best by building, debugging, experimenting and improving."
+      "Currently pursuing an M.Sc. in Data Science (1st Year) with a completed B.Sc. degree in Computer Science.",
+      "My interests bridge Data Science, AI, software engineering, and IoT micro-systems — building intelligent, data-driven web applications, scalable database architectures, and physical sensor solutions.",
+      "I learn best by analyzing data, writing clean modular code, experimenting with emerging AI technologies, and shipping functional projects."
     ],
     stats: [
-      { label: "Degree", value: "B.Sc. CS", subtext: "2022 – 2025 (KG College)" },
-      { label: "Projects", value: "3+ Built", subtext: "Software, Web & IoT" },
-      { label: "Technologies", value: "10+ Tools", subtext: "Programming & Hardware" },
-      { label: "Learning Focus", value: "React & AI", subtext: "Smart Web Applications" },
+      { label: "M.Sc. Data Science", value: "Currently Pursuing", subtext: "1st Year (2025 – Present)", current: true },
+      { label: "B.Sc. Computer Science", value: "Completed", subtext: "2022 – 2025 (KG College)", current: false },
+      { label: "Projects", value: "3+ Built", subtext: "Software, Web & IoT", current: false },
+      { label: "Focus Areas", value: "Data & AI", subtext: "Smart Systems & Web", current: false },
     ],
   },
 
@@ -245,28 +245,41 @@ export const portfolioData = {
   education: [
     {
       id: 1,
-      degree: "B.Sc. Computer Science",
-      institution: "KG College of Arts and Science",
-      period: "2022 – 2025",
-      score: "CGPA: 78.56%",
+      degree: "M.Sc. Data Science",
+      institution: "University / Institution",
+      period: "2025 – Present",
+      score: "1st Year • Currently Pursuing",
+      status: "CURRENT",
       featured: true,
-      description: "Core coursework: Programming in C/C++, Data Structures, Web Development, Relational & NoSQL Database Systems, Computer Networks, and Software Engineering."
+      description: "Advanced coursework and practical exploration in Data Science, Machine Learning, Data Analytics, Statistical Modeling, Big Data Systems, and Data-Driven Software Solutions."
     },
     {
       id: 2,
+      degree: "B.Sc. Computer Science",
+      institution: "KG College of Arts and Science",
+      period: "2022 – 2025",
+      score: "CGPA: 78.56% (Completed)",
+      status: "COMPLETED",
+      featured: false,
+      description: "Core coursework: Programming in C/C++, Data Structures, Web Development, Relational & NoSQL Database Systems, Computer Networks, and Software Engineering."
+    },
+    {
+      id: 3,
       degree: "Higher Secondary Education (HSC)",
       institution: "SRC Memorial Matriculation Higher Secondary School",
       period: "2021 – 2022",
       score: "Completed with Merit",
+      status: "COMPLETED",
       featured: false,
       description: "Focused on Computer Science, Mathematics, Physics, and Chemistry."
     },
     {
-      id: 3,
+      id: 4,
       degree: "High School (SSLC)",
       institution: "SRC Memorial Matriculation Higher Secondary School",
       period: "2019 – 2020",
       score: "Completed with Merit",
+      status: "COMPLETED",
       featured: false,
       description: "Foundational education in General Science, Mathematics, and Languages."
     }

@@ -1,4 +1,4 @@
-import heroImage from '../assets/hero.png';
+import profilePhoto from '../assets/my image.png';
 
 export const portfolioData = {
   profile: {
@@ -8,7 +8,7 @@ export const portfolioData = {
     supportingText: "Computer Science graduate interested in software development, IoT systems, databases, and emerging AI technologies. I enjoy learning by building practical solutions to real-world problems.",
     availability: "OPEN TO OPPORTUNITIES",
     resumeUrl: "/resume.pdf",
-    image: heroImage,
+    image: profilePhoto,
   },
 
   currentlyBuilding: {

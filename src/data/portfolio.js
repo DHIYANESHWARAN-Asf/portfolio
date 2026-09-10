@@ -1,4 +1,4 @@
-import profilePhoto from '../assets/my image.png';
+import profilePhoto from '../assets/profile.png';
 
 export const portfolioData = {
   profile: {

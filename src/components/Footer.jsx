@@ -41,7 +41,6 @@ const Footer = () => {
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Building', href: '#building' },
     { name: 'How I Build', href: '#how-i-build' },
     { name: 'Education', href: '#education' },
     { name: 'Certifications', href: '#certifications' },

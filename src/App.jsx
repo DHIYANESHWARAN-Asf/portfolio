@@ -1,6 +1,5 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import CurrentlyBuilding from './components/CurrentlyBuilding';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -38,9 +37,6 @@ function App() {
       <main>
         {/* Hero Section */}
         <Hero onDownloadResume={handleDownloadResume} />
-
-        {/* Currently Building Banner */}
-        <CurrentlyBuilding />
 
         {/* About & Key Stats */}
         <About />

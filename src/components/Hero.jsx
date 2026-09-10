@@ -430,7 +430,7 @@ const Hero = ({ onDownloadResume }) => {
           className="pt-12 flex flex-col items-center justify-center"
         >
           <button
-            onClick={() => scrollToSection('#building')}
+            onClick={() => scrollToSection('#about')}
             className="group flex flex-col items-center space-y-2 text-xs font-mono text-zinc-400 hover:text-blue-400 transition-colors cursor-pointer"
           >
             <span>Scroll to explore</span>

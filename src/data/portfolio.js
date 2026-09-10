@@ -11,16 +11,6 @@ export const portfolioData = {
     image: profilePhoto,
   },
 
-  currentlyBuilding: {
-    title: "IoT Smart Automation & Environmental Monitoring System",
-    description: "An Arduino & C/C++ based embedded IoT solution designed to collect real-time sensor data, process environmental metrics, and trigger automated controls with low-latency hardware interaction.",
-    technologies: ["C", "C++", "Arduino", "IoT", "Sensors", "Hardware"],
-    progress: 80,
-    status: "PROTOTYPE",
-    github: null,
-    live: null,
-  },
-
   about: {
     heading: "A LITTLE ABOUT ME",
     paragraphs: [
